@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fond</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+
+    <div class="accueil">
+        <h1>FOND</h1>
+
+    </div>
+    <table>
+        <figure>
+            <tr>
+                <td>
+                    <figcaption>Ecouter Lacrim:</figcaption>
+                    <audio controls src="/lacrim-limmortale.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+                </td>
+            </tr>
+        </figure>
+        <div class="clock">
+            <div class="display">
+            </div>
+        </div>
+        <script>
+            setInterval(function () {
+                const clock = document.querySelector(".display");
+                let time = new Date();
+                let sec = time.getSeconds();
+                let min = time.getMinutes();
+                let hr = time.getHours();
+                let day = 'AM';
+                if (hr > 12) {
+                    day = 'H';
+                    hr = hr - 12;
+                }
+                if (hr == 0) {
+                    hr = 12;
+                }
+                if (sec < 10) {
+                    sec = '0' + sec;
+                }
+                if (min < 10) {
+                    min = '0' + min;
+                }
+                if (hr < 10) {
+                    hr = '0' + hr;
+                }
+                clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+            });
+        </script>
+
+
+        <figure>
+            <h2>Musique</h2> <br>
+            <tr>
+                <td>
+                    <figcaption>Ecouter Da Uzi:</figcaption>
+                    <audio controls src="da-uzi-le-dehors-clip-officiel.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+
+                </td>
+            </tr>
+        </figure>
+
+
+        <figure>
+            <tr>
+                <td>
+                    <figcaption>Ecouter Niro:</figcaption>
+                    <audio controls src="niro-millenials-generation-y-clip-officiel.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+
+                </td>
+            </tr>
+        </figure>
+
+        <figure>
+            <tr>
+                <td>
+                    <figcaption>Ecouter Mister you:</figcaption>
+                    <audio controls src="mister-you-feat-balti-maghrebins-clip-officiel.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+
+                </td>
+            </tr>
+        </figure>
+
+        <figure>
+            <tr>
+                <td>
+                    <figcaption>Ecouter Jul :</figcaption>
+                    <audio controls src="jul-la-bandite-clip-officiel-2019.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+
+                </td>
+            </tr>
+        </figure>
+
+        <figure>
+            <tr>
+                <td>
+                    <figcaption>Ecouter Ckay:</figcaption>
+                    <audio controls src="ckay-elgrandetoto-love-nwantiti-official-audio.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+
+                </td>
+            </tr>
+        </figure> <br>
+
+
+    </table>
+
+    <br>
+
+    <div class="wrapper">
+        <div class="toast">
+            <div class="content">
+                <div class="icon"><i class="uil uil-wifi"></i></div>
+                <div class="details">
+                    <span>Vous êtes en ligne maintenant</span>
+                    <p>Yes! Internet est connecté.</p>
+                </div>
+            </div>
+            <div class="close-icon"><i class="uil uil-times"></i></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor");
+        document.addEventListener("mousemove", function (e) {
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX
+                + "px; top: " + e.clientY + "px;";
+        });
+    </script>
+
+</body> <br>
+
+<footer> &copy; LSDS tous droit réserver </footer>
+
+</html>
